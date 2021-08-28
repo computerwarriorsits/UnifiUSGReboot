@@ -15,6 +15,6 @@ save >> ${logFile}
 /usr/bin/curl --silent 'https://raw.githubusercontent.com/computerwarriorsits/UnifiUSGReboot/reboot.sh' > /config/scripts/reboot.sh
 /bin/chmod +x /config/scripts/reboot.sh
 
-#add task to run every day at 3am
+#add task to run every Sunday at 3am
 touch /var/spool/cron/crontabs/root
 { crontab -l; echo "0 3 * * 7 /config/scripts/restartvpn.sh"; } | crontab -
